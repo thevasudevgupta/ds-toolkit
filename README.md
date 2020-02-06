@@ -1,2 +1,2 @@
 # Git--Notes
-A readme to git
+ [Git Notes readme](git-notes.md)
