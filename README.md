@@ -4,4 +4,4 @@
  - [Markdown notes](markdown-notes.md)
 
 
-Thanks to @sreekarsr
+Thanks to @sreekarsr for contributing.
