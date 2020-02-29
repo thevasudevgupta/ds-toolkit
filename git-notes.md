@@ -65,15 +65,16 @@ in case of:
 
 **MERGE CONFLICTS**
 
-- on a particular line, if there is a change in one of the branches, and no change on the other branch, the CHANGE WILL WIN on the merge-commit
+- on a particular line, if there is a change in one of the branches, and no change on the other branch, the **CHANGE WILL WIN** on the merge-commit
 - if there are different changes on the same line, git tells you that automatic merge failes, fix conflicts. This time, using git status tells you 'You have unmerged paths' which means the merge is still on, and will complete when the conflicts are resolved.(at this stage we may abort using git merge --abort).
 Now, go into the conflicting files, to see the changes git has made to indicate conflicts
 
-<<<<<<<HEAD
+```<<<<<<<HEAD
 ..				(status in HEAD)
 ======
 ..				(status in otherbranchname)
 >>>>>>><other-branchname>
+```
 
 Just delete everything except what you want to keep, then use git add, to add the file to commit just like any other commit.
 checking git status says 'all conflicts fixed, but still merging' Using 'git commmit' will conclude the merge-----
@@ -97,11 +98,6 @@ But, these stashes remain (see git stash list) these are there so that we can re
 if we want to apply a specific stash, use `git stash apply <labelname>`
 
 `git stash pop` this will apply the stashes and delete the stash
-
-
-
-
-
 
 **USING REMOTE REPOS**
 
@@ -153,7 +149,7 @@ to see all branches, use `git branch -a` To see only remote branches, use `git b
 AMAZING TUTORIALS - courtesy David Mahler
 https://www.youtube.com/watch?v=uR6G2v_WsRA
 
-**VIDEO 1**
+## All commands overview:
 
 `git init` - initialize a new repo in a directory
 
@@ -178,8 +174,6 @@ https://www.youtube.com/watch?v=uR6G2v_WsRA
 `git reset HEAD filename` - retrieve a file from the latest commit into the staging area
 
 `git checkout (commit hash) filename` - retrieve a file from a previous commit
-
-**VIDEO 2**
 
 `git log` =  git history
 
@@ -218,11 +212,6 @@ https://www.youtube.com/watch?v=uR6G2v_WsRA
 `git stash apply (stash reference)` = apply a specific stash point
 
 `git stash save "(description)"` = create a stash point, be more descriptive
-
-
-**VIDEO 3**
-
-Commands used:
 
 Retrieve/Clone a repo = `git clone (URL)`
 

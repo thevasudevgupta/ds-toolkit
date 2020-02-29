@@ -1,5 +1,6 @@
-# Git--Notes
- [Git Notes readme](git-notes.md)
+# Git-Notes
+
+ - [Git command line notes](git-notes.md)
 
 
 Thanks to @sreekarsr
