@@ -4,10 +4,12 @@ Knowing to use GIT from command line and the basic terminologies is essential fo
 
 - [What is GIT](git-intro.md)
 - [Command line usage](git-commands.md)
-- [Pro git commands and ease of life methods](git-pro.md)
+- [Useful extensions and ease of life methods](git-ease.md)
+- [Merging vs Rebase (when you should do what?)](git-mergevsrebase.md)
 
 # Markdown
 
-Writing good markdown files is equally important as maintaining a clean repository. Some basic commands can be found here.
+Writing good markdown files is equally important as maintaining a clean repository. Some basic stuff can be found here.
 
-- [Basic commands](markdown.md)
+- [Markdown intro](markdown-intro.md)
+- [Some additional/useful stuff](markdown-useful.md)
