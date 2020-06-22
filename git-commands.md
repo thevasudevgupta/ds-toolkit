@@ -100,4 +100,5 @@ Now, go into the conflicting files, to see the changes git has made to indicate 
 
 Just delete everything except what you want to keep, then use `git add`, to add the file to commit just like any other commit. Checking `git status` says 'all conflicts fixed, but still merging' Using 'git commmit' will conclude the merge. 
 
+------
 [AMAZING TUTORIALS](https://www.youtube.com/watch?v=uR6G2v_WsRA) - courtesy David Mahler 

@@ -15,6 +15,7 @@ Here’s the git terminology:
 - **Repository** - The git project folder is called a git repository.
 
 - **Branch** - A branch in the repo is like another world. A person working in one branch of the repo can switch to another and hence work there without affecting anything on the other branch. Once satisfied the user can merge these branches together.
+
 ![structure](assets/structure.png)
 
 Hence as seen in the above image there are three branches -  the master branch, branch1 and branch2 all independent of one another.
