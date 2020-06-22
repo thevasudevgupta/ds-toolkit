@@ -32,7 +32,7 @@ These are **tools and the extensions** that you can use to improve your workflow
 
 Too lazy to copy and paste or download your `.gitignore` file each time you create a new repository?
 
-```
+```bash
 curl -s https://www.gitignore.io/api/{your_list} >> .gitignore
 ```
 
@@ -47,7 +47,7 @@ Replace **`{your_list}`** with a comma-separated-list _(one or more)_ of **Opera
 
 GitHub has `Download as .zip` option in all hosted repositories and to do the same from your terminal
 
-```
+```bash
 git archive master --output=master.zip
 ```
 
@@ -55,13 +55,13 @@ git archive master --output=master.zip
 
 Before cleaning its always good to know which files are going to be cleaned
 
-```
+```bash
 git clean -n
 ```
 
 Then when you are comfortable use the `-f` or `-fd` option.
 
-```
+```bash
 git clean -f     # Cleans files only without cleaning directories
 git clean -fd    # Cleans files & directories
 ```
@@ -70,14 +70,14 @@ git clean -fd    # Cleans files & directories
 
 Having a lot of branches also leads to a very messy repo. 
 
-```
+```bash
 git branch | grep -v 'master' | xargs git branch -D
 ```
 
 You can replace `master` with any other branch name that you want to keep, but be careful **this will delete master**.  
 Or even use a pattern of **more than one branch** to keep them and delete the rest.
 
-```
+```bash
 git branch | grep -v 'master\|gh-pages' | xargs git branch -D
 ```
 
@@ -85,7 +85,7 @@ git branch | grep -v 'master\|gh-pages' | xargs git branch -D
 
 Deleting local branches doesn't clean the repo 100%, since they were tracking remote branches (This will only work if you've already deleted the remote branch from your GitHub repo)_
 
-```
+```bash
 git fetch --prune
 ```
 
@@ -93,7 +93,7 @@ git fetch --prune
 
 Deleting a commit is **dangerous**, since the SHA of all following commits **will change**. Please be careful using this!
 
-```
+```bash
 git rebase --onto <commit-SHA>^ <commit-SHA>
 ```
 
@@ -117,7 +117,7 @@ This can be useful when lets say you are using GitHub Pages you want to complete
 
 To create a new empty orphan branch, use the following commands
 
-```
+```bash
 git checkout --orphan <new-branch-name>
 rm .git/index
 git clean -fdx
@@ -158,7 +158,7 @@ git ls-files --others --ignored --exclude-standard
 
 To keep track of your repository size.
 
-```
+```bash
 git rev-list --objects --all \
 | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' \
 | sed -n 's/^blob //p' \
@@ -167,37 +167,37 @@ git rev-list --objects --all \
 | $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
 ```
 
+### Git show
 
+git-show is a command line utility that is used to view expanded details on Git objects such as blobs, trees, tags, and commits. Tags show the tag message and other objects included in the tag. Trees show the names and content of objects in a tree. Blobs show the direct content of the blob. Commits show a commit log message and a diff output of the changes in the commit.
 
+### Gitk
 
+Gitk is a graphical repository browser. It can be thought of as a GUI wrapper for git log. It is useful for exploring and visualizing the history of a repository. Git Gui is another GUI to Git. While Gitk focuses on navigating and visualizing the history of a repository, Git Gui focuses on refining individual commits, single file annotation and does not show project history.
 
+### Git cherry pick
 
+git cherry-pick is a powerful command that enables arbitrary Git commits to be picked by reference and appended to the current working HEAD. Cherry picking is the act of picking a commit from a branch and applying it to another. git cherry-pick can be useful for undoing changes. For example, say a commit is accidently made to the wrong branch. You can switch to the correct branch and cherry-pick the commit to where it should belong. Example:
 
+If this was the initial state
 
+```markdown
+    a - b - c - d   Master
+         \
+           e - f - g Feature
+```
 
+on doing
 
+```bash
+git checkout master
+git cherry-pick f
+```
 
+new state (The f commit has been successfully picked into the feature branch)
 
-
-
-
-
-
-
-
-
-
-
-
-### Some other commands
-
-- `git clean -n` - clean local untracked files
-- `git clean -f` - clean files only without cleaning directories
-- `git clean -fd` - clean files along with directories
-- `git branch | grep -v 'master' | xargs git branch -D` - delete all branches except master
-- `git branch | grep -v 'master\|gh-pages' | xargs git branch -D` - delete all branches except master and gh-pages (can be extended to any number of branches)
-- `git fetch --prune` - delete remote-tracking branches
-- `git rebase <base>` - this automatically rebases the current branch onto <base>
-- `git rebase --interactive <base>` - running git rebase with the -i flag begins an interactive rebasing session. Instead of blindly moving all of the commits to the new base, interactive rebasing gives you the opportunity to alter individual commits in the process.
-- `curl -s https://www.gitignore.io/api/{your_list} >> .gitignore` - to easily download .gitignore files instead of copying them each time. Replace `{your-list}` with appropriate Operating System or IDE or Programming Language names for example : `https://www.gitignore.io/api/windows or https://www.gitignore.io/api/visualstudio or https://www.gitignore.io/api/c++ or https://www.gitignore.io/api/linux,intellij,java`. Mulitple names can also be given by seperating with a comma. 
-- `git checkout --orphan <new-branch-name>` - To create a new orphan branch. Orphan branches aren't based on any other branches.The first commit made on this new orphan branch will have no parents and it will be the root of a new history totally disconnected from all the other branches and commits.
+```markdown
+    a - b - c - d - f   Master
+         \
+           e - f - g Feature
+```
