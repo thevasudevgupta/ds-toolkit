@@ -8,7 +8,7 @@
 - `pip3 freeze`
 - `pip3 install [some_package]`
 - `cat requirements.txt`
-- `pip3 install requirements.txt`
+- `pip3 install -r requirements.txt`
 - `deactivate`
 - `rm -rf venv_name`
 

@@ -10,4 +10,3 @@ This repo is involving some handy stuff which every data scientist should know. 
 I got these awesome git-notes and markdown intro files from [Mukund's](https://github.com/MukundVarmaT/GIT-notes) Repo
 
 ## Feel free to contribute to this repo
-
