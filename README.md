@@ -1,12 +1,13 @@
 # ds-toolkit
 
-This repo is involving some handy stuff which every data scientist should know. These tools are realy handy to use for any data science project.
+This repo is having some useful stuff for data scientist related stuff.
 
 - [Markdown](markdown)
 - [Git Notes](git-notes)
 - [docker-notes](docker-notes)
 
 ## Contributions
-I got these awesome git-notes and markdown intro files from [Mukund's](https://github.com/MukundVarmaT/GIT-notes) Repo
 
-## Feel free to contribute to this repo
+I got these awesome git-notes and markdown intro files from [Mukund's repo](https://github.com/MukundVarmaT/GIT-notes).
+
+**Feel free to contribute to this repo**
