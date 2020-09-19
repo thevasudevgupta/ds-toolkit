@@ -1,6 +1,7 @@
-tensorflow==2.2.0
-transformers==2.11.0
-torch==1.5.1
+tensorflow==2.3.0
+transformers==3.1.0
+Pytorch-lightning==0.9.0
+torch==1.6.0
 torchvision==0.6.1
 numpy==1.18.1
 pandas==1.0.1
@@ -20,4 +21,5 @@ xgboost==1.1.1
 contractions==0.0.24
 emoji==0.5.4
 magic-wormhole==0.12.0
+easydict==1.9
 

@@ -1,6 +1,8 @@
-# DVC (Data Version Control)
+## DVC (Data Version Control)
 
-## First install these dependencies
+It can be used to have version control of data.
+
+### First install these dependencies
 
 ```Dependencies
 # Make sure to install these dependencies for integrating Google-drive
@@ -8,7 +10,7 @@ pip install pydrive2
 pip install 'dvc[gdrive]'
 ```
 
-## Pipeline of working
+### Pipeline of working
 
 ```Pipeline
 # initialized repositary for dvc
@@ -25,7 +27,7 @@ git commit [file-name].dvc -m 'raw data added'
 dvc push -r gdrive
 ```
 
-## Setting up Remote
+### Setting up Remote
 
 ```Remote setup
 # adding google drive as remote for cache
