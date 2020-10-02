@@ -1,6 +1,7 @@
 # system-setup
 
 This repo aims to ease process of setting up **deep learning enviroment**.
+**Installing [miniconda](https://docs.conda.io/en/latest/miniconda.html)**
 
 ```python
 # create environment
