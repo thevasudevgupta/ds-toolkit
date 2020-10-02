@@ -1,8 +1,9 @@
 # __author__ == "Vasudev Gupta"
 # __author_email__ == "7vasudevgupta@gmail.com"
 
-# INSTALL MINICONDA
-# run the script at "https://docs.conda.io/en/latest/miniconda.html" using shell
+# install minconda using shell-script at "https://docs.conda.io/en/latest/miniconda.html"
+# create & activate environment
+# then run this script
 
 # change this to false if you don't want to install:
 # - jupyter-notebook
