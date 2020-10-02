@@ -11,6 +11,7 @@
 |`git diff`|shows difference between current working tree and the staging area|
 |`git diff --staged`|to show the differences between the staging area and last commit|
 |`git diff <other-branch-name>`|to comapare with another branch|
+|`git diff <branch1-name>..<branch2-name> -- <file>`|To get difference between single file in 2 branches|
 |`git rm <filename>`|removes the file from the directory as well as from the staging area|
 |`git checkout -- <filename>`|replace changes we've made to a file in the working tree to the version it was in the staging area (undo working tree change)|
 |`git reset HEAD <filename>`|to replace it with the last commit (undo staging of files)|

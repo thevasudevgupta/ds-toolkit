@@ -1,4 +1,4 @@
-## Setting up Virtual Env using Python
+# Setting up Virtual Env using Python
 
 - `python3 -m venv venv_name`
 - `python3 -m venv venv_name --system-site-packages`
@@ -12,5 +12,4 @@
 - `deactivate`
 - `rm -rf venv_name`
 
-## Note
-- Don't put any script inside virtual environment.
+**Note:** Don't put any script inside virtual environment.
