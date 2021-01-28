@@ -1,0 +1,13 @@
+#numpy==1.19.4
+#pandas==1.1.4
+#plotly==4.12.0
+wandb==0.10.11
+#
+#tensorflow==2.4.0
+#torch==1.7.1
+#transformers==4.1.1
+#torchvision==0.8.2
+#
+#notebook==6.2.0
+#jupyterlab==3.0.5
+#spyder==4.2.1

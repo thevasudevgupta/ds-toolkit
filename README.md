@@ -3,9 +3,9 @@
 This repo is having some useful stuff for data scientist related stuff.
 
 - [Markdown](markdown)
-- [Git Notes](git-notes)
-- [docker-notes](docker-notes)
-- [deep learning setup](system-setup)
+- [Git-Notes](git-notes)
+- [Docker-Notes](docker-notes)
+- [System-setup](system-setup)
 
 ## Contributions
 
