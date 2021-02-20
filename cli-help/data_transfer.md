@@ -1,7 +1,10 @@
+# Ease data transfer
+
 ## magic-wormhole
 
 It can be used to send files/folders between two machines/ VMs.
-```
+
+```shell
 Just install it using pip:  
 pip install magic-wormhole
 
@@ -16,7 +19,8 @@ magic-wormhole receive <key-name>
 
 This is best method and very fast as compared to above. For this you need to have aws credits. Use this for transferring big data.<br>
 **Installing [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)**
-```
+
+```shell
 # Install aws-cli first
 
 # run following command to configure aws to local system

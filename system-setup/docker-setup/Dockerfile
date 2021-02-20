@@ -1,14 +1,12 @@
-FROM ubuntu:18.04
+FROM pytorch/pytorch
 LABEL maintainer="https://github.com/vasudevgupta7"
 
 RUN apt-get update && \
-    apt-get install -y python3-pip \
-                       python3 \
-    				   git
+    apt-get install -y git
 
-WORKDIR /usr/src/workspace/
+WORKDIR /workspace/
 
-COPY . docker/
-RUN pip3 install -r docker/requirements.txt
+COPY . .
+RUN pip3 install -r requirements.txt
 
-CMD ["sh", "docker/entrypoint.sh"]
+CMD ["sh", "entrypoint.sh"]
