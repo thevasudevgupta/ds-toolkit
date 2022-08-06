@@ -7,4 +7,4 @@ spyder
 
 Cython
 pyarrow==0.9.0
-streamlit==0.75.0
+streamlit==1.11.1
